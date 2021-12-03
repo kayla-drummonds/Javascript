@@ -1,0 +1,33 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <form>
+        <span id='fn'>First name:</span><br />
+        <input type="text" id="fname">
+        <br />
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        const name = document.getElementById("fname");
+        const element = document.getElementById('fn');
+        name.addEventListener('focus', changeToCoral);
+        name.addEventListener('blur', changeToWhite);
+        document.querySelector('form').addEventListener("submit", function () {
+            alert(name.value)
+        });
+        function changeToCoral() {
+            element.style.color = 'coral';
+        }
+        function changeToWhite() {
+            element.style.color = 'white';
+        }
+    </script>
+</body>

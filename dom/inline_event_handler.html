@@ -1,0 +1,22 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Events</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <button onclick="changeText()">Click me!</button>
+    <p>Try to change me!</p>
+
+    <script>
+        var changeText = () => {
+            var p = document.querySelector('p');
+            p.textContent = "I changed because of an inline event handler.";
+        }
+    </script>
+</body>
+
+</html>
